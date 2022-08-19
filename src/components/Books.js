@@ -1,28 +1,17 @@
-const Books = () => (
-  <>
-    <section className="bookDisplayCate">
-      <small className="category">Musical</small>
-      <h3 className="bookTitle">Trap Diaries</h3>
-      <small className="bookAuthor">Hamxi3bwoy</small>
+import React, { useState } from 'react';
+import Form from './Form';
+import Book from './Book';
 
-      <ul className="ul">
-        <li>Comments</li>
-        <li>Remove</li>
-        <li>Edit</li>
-      </ul>
-    </section>
-
-    <section className="addBookSec">
-      <h2>ADD BOOK</h2>
-      <form>
-        <input type="text" name="book" value="Title" className="input1" />
-
-        <input type="text" name="author" value="Author" className="input2" />
-
-        <input type="submit" value="Submit" className="input3" />
-      </form>
-    </section>
-  </>
-);
+const Books = () => {
+  const [bookList] = useState([
+    { title: 'Trapp Diaries', author: 'Hamxi3bwoy', id: 1 },
+  ]);
+  return (
+    <div>
+      <Book bookList={bookList} />
+      <Form />
+    </div>
+  );
+};
 
 export default Books;

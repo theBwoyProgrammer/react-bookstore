@@ -8,7 +8,7 @@ const Header = () => (
         <NavLink to="/">Books</NavLink>
       </li>
       <li key={2} className="li">
-        <NavLink to="/Categories">Categories</NavLink>
+        <NavLink to="/categories">Categories</NavLink>
       </li>
     </nav>
   </header>
