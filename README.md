@@ -1,6 +1,6 @@
 # Bookstore
 
-This website presents the best Tv shows. We have used TVmaze API to get the movie content. we have used Javascript, HTML and CSS to build the website.
+In this feature, I made a book storing website which helps a user to store the Book titles and Authors names. This is to be used by book lovers to note down books for reference and reading percentage monitoring
 ## Overview
 
 ## Built With
