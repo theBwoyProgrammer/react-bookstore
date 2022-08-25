@@ -11,6 +11,6 @@ const categoryReducer = (state = array, action) => {
 };
 export default categoryReducer;
 
-export const actionCreator = () => ({
+export const ActionCreator = () => ({
   type: CHECKSTATUS,
 });

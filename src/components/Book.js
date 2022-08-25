@@ -11,19 +11,12 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
   const remove = (e) => {
+    console.log(e.target.parentNode);
     const { id } = e.target.parentNode;
     dispatch(
       removeactionCreator(id),
     );
-    return (
-      <div>
-        {Book.map((book) => (
-          <Book key={book.id} id={book.id} book={book} remove={remove} />
-        ))}
-      </div>
-    );
   };
-
   return (
     <div className="book">
       {bookList.map((book) => (
