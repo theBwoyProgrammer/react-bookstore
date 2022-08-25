@@ -1,8 +1,9 @@
+/* eslint-disable import/extensions */
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeactionCreator } from '../redux/book/book';
+import { removeactionCreator } from '../redux/book/book.js';
 // import { useSelector } from 'react-redux/es/hooks/useSelector';
 
 const Book = (props) => {

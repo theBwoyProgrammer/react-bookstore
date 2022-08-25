@@ -1,6 +1,7 @@
+/* eslint-disable import/extensions */
 import { React, useState } from 'react';
 import { useDispatch } from 'react-redux/es/exports';
-import { addactionCreator } from '../redux/book/book';
+import { addactionCreator } from '../redux/book/book.js';
 
 const Form = () => {
   const dispatch = useDispatch();
