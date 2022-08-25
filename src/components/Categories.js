@@ -1,5 +1,6 @@
+/* eslint-disable import/extensions */
 import { useDispatch } from 'react-redux/es/exports';
-import { ActionCreator } from '../redux/category/category';
+import { ActionCreator } from '../redux/category/category.js';
 
 const Categories = () => {
   const dispatch = useDispatch();

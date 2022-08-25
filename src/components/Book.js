@@ -11,7 +11,6 @@ const Book = (props) => {
 
   const dispatch = useDispatch();
   const remove = (e) => {
-    console.log(e.target.parentNode);
     const { id } = e.target.parentNode;
     dispatch(
       removeactionCreator(id),
