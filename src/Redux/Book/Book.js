@@ -1,7 +1,36 @@
+import { v4 as uuidv4 } from 'uuid';
+
 const ADDBOOK = './bookStore/Book/ADDBOOK';
 const REMOVEBOOK = './bookStore/Book/REMOVEBOOK';
 
-const reduce = [];
+export const reduce = [
+  {
+    title: 'Trapp Diaries',
+    author: 'Hamxi3bwoy',
+    id: uuidv4(),
+  },
+  {
+    title: 'Slime',
+    author: 'Hamxi3bwoy',
+    id: uuidv4(),
+  },
+  {
+    title: 'Three Trap Pies',
+    author: 'Hamxi3bwoy',
+    id: uuidv4(),
+  },
+  {
+    title: 'Wuthering Heights',
+    author: 'Emily Bronte',
+    id: uuidv4(),
+  },
+  {
+    title: 'Treasure Island',
+    author: 'Louis Stevenson',
+    id: uuidv4(),
+  },
+];
+// console.log(reduce);
 const bookReducer = (state = reduce, action) => {
   switch (action.type) {
     case ADDBOOK:
@@ -9,7 +38,7 @@ const bookReducer = (state = reduce, action) => {
         action.book,
       ];
     case REMOVEBOOK:
-      return state.filter((book) => book.id !== action.book.id);
+      return state.filter((book) => book.id !== action.id);
     default:
       return state;
   }
@@ -22,7 +51,7 @@ export const addactionCreator = (book) => ({
   book,
 });
 
-export const removeactionCreator = (book) => ({
+export const removeactionCreator = (id) => ({
   type: REMOVEBOOK,
-  book,
+  id,
 });
