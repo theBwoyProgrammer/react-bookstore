@@ -1,6 +1,7 @@
+/* eslint-disable import/extensions */
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import checkBookStatus from '../redux/category/category';
+import checkBookStatus from '../redux/category/category.js';
 
 const BookCategory = () => {
   const handlecheckStatus = (status) => {

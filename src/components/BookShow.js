@@ -1,9 +1,10 @@
+/* eslint-disable import/extensions */
 /* eslit-disable */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import BookCollection from './Books';
 import AddBook from './Form';
-import { fetchBooks } from '../redux/book/book';
+import { fetchBooks } from '../redux/book/book.js';
 
 const DisplayBooks = () => {
   const books = useSelector((state) => state.books);
