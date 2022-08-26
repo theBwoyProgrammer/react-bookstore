@@ -1,3 +1,5 @@
+import { createAsyncThunk } from '@reduxjs/toolkit';
+
 /* eslint-disable */
 
 // define constant
@@ -23,6 +25,7 @@ export const fetchBooks = () => async (dispatch) => {
 };
 // add new book
 export const newBookFetch = (book) => async (dispatch) => {
+  createAsyncThunk;
   await fetch('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/vBL8ApZ4vcvWCNS7zsXG/books/', {
     method: 'POST',
     headers: {

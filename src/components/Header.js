@@ -1,6 +1,5 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-// import profileImg from '../../page/icon.png';
 
 const NavBar = () => {
   const URLS = [
