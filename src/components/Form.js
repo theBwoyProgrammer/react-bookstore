@@ -1,46 +1,51 @@
-/* eslint-disable import/extensions */
-import { React, useState } from 'react';
-import { useDispatch } from 'react-redux/es/exports';
-import { addactionCreator } from '../redux/book/book.js';
+/* eslint-disable */
 
-const Form = () => {
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { newBookFetch } from '../redux/book/book';
+
+const AddBook = () => {
   const dispatch = useDispatch();
-  const [form, setForm] = useState({ title: '', author: '' });
-
-  const change = (e) => {
+  const [titleName, setTitle] = useState('');
+  const [authorName, setAuthor] = useState('');
+ 
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const add = (e) => {
-    e.preventDefault();
-    if (form.title.trim() && form.author.trim()) {
       const data = {
-        id: Date.now(),
-        title: form.title,
-        author: form.author,
+        item_id: Number(Date.now()),
+        title: titleName,
+        author: authorName,
+        category: 'categories',
       };
-      dispatch(addactionCreator(data));
-      setForm({ title: '', author: '' });
-    }
+      dispatch(newBookFetch(data));
+      setTitle('');
+    setAuthor('');
+ //  }
   };
   return (
-    <div className="form">
-      <h3>ADD NEW BOOK</h3>
-      <form onSubmit={add}>
-        <input type="text" name="title" onChange={change} value={form.title} />
-        <input type="text" name="author" onChange={change} value={form.author} />
-        <select>
-          <option value="Categories">Categories</option>
-          <option value="Books">Books</option>
-        </select>
-        <button type="submit">ADD BOOK</button>
+    <div>
+      <h2>ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          name="title"
+          type="text"
+          placeholder="Book title"
+          value={titleName}
+          onInput={(e) => setTitle(e.target.value)}
+
+        />
+        <input
+          name="author"
+          type="text"
+          placeholder="Author"
+          value={authorName}
+          onInput={(e) => setAuthor(e.target.value)}
+        />
+        <button type="submit">
+          ADD BOOK
+        </button>
       </form>
     </div>
   );
 };
-
-export default Form;
+export default AddBook;

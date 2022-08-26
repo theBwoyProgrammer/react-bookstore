@@ -1,17 +1,35 @@
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Header = () => (
-  <header className="header">
-    <h1 className="header-head">Book Store CMS</h1>
+const NavBar = () => {
+  const URLS = [
+    {
+      id: 1,
+      url: '/',
+      text: 'Books',
+    },
+    {
+      id: 2,
+      url: '/categories',
+      text: 'CATEGORIES',
+    },
+  ];
+  return (
     <nav className="navbar">
-      <li key={1} className="li">
-        <NavLink to="/">Books</NavLink>
-      </li>
-      <li key={2} className="li">
-        <NavLink to="/categories">Categories</NavLink>
-      </li>
-    </nav>
-  </header>
-);
+      <h1>Bookstore CMS</h1>
+      <div>
+        <ul className="navmenu">
+          {URLS.map((url) => (
+            <li className="nav-item" key={url.id}>
+              <NavLink to={url.url}>{url.text}</NavLink>
+            </li>
+          ))}
 
-export default Header;
+        </ul>
+      </div>
+      <i className="fa-light fa-user" />
+    </nav>
+  );
+};
+
+export default NavBar;
