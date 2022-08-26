@@ -1,16 +1,19 @@
-const CHECKSTATUS = './bookStore/Category/CHECKSTATUS';
+// define constant
+const CHECK_STATUS = 'bookstore/categories/CHECK_STATUS';
 
-const array = [];
-const categoryReducer = (state = array, action) => {
+const categories = [];
+const categoriesReducer = (state = categories, action) => {
   switch (action.type) {
-    case CHECKSTATUS:
-      return 'Under Construction';
+    case CHECK_STATUS:
+      return 'Under construction';
     default:
       return state;
   }
 };
-export default categoryReducer;
 
-export const ActionCreator = () => ({
-  type: CHECKSTATUS,
+const checkBookStatus = () => ({
+  type: CHECK_STATUS,
+
 });
+
+export default { categoriesReducer, checkBookStatus };
