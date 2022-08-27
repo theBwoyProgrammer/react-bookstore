@@ -28,7 +28,7 @@ const NavBar = () => {
             </>
           ))}
           <li className="contact">
-            <img src={person} alt="" height={35} width={70} />
+            <img src={person} alt="" height={35} width={70} className="pic" />
           </li>
         </ul>
       </div>

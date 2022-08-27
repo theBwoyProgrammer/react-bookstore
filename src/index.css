@@ -143,3 +143,9 @@ input {
 .contact {
   margin-left: 660px;
 }
+
+.pic {
+  border: lightgray 2px solid;
+  border-radius: 500px;
+  padding: 3px;
+}
