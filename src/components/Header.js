@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import person from './Assests/person.png';
 
 const NavBar = () => {
   const URLS = [
@@ -11,23 +12,26 @@ const NavBar = () => {
     {
       id: 2,
       url: '/categories',
-      text: 'CATEGORIES',
+      text: 'Categories',
     },
   ];
   return (
     <nav className="navbar">
-      <h1>Bookstore CMS</h1>
-      <div>
-        <ul className="navmenu">
+      <h1 className="h1">Bookstore CMS</h1>
+      <div className="nav-container">
+        <ul className="menu">
           {URLS.map((url) => (
-            <li className="nav-item" key={url.id}>
-              <NavLink to={url.url}>{url.text}</NavLink>
-            </li>
+            <>
+              <li className="nav-item" key={url.id}>
+                <NavLink to={url.url}>{url.text}</NavLink>
+              </li>
+            </>
           ))}
-
+          <li className="contact">
+            <img src={person} alt="" height={35} width={70} className="pic" />
+          </li>
         </ul>
       </div>
-      <i className="fa-light fa-user" />
     </nav>
   );
 };

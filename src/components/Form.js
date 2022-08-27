@@ -24,7 +24,7 @@ const AddBook = () => {
   };
   return (
     <div>
-      <h2>ADD NEW BOOK</h2>
+      <h2 className='add'>ADD NEW BOOK</h2>
       <form onSubmit={handleSubmit}>
         <input
           name="title"
@@ -41,7 +41,15 @@ const AddBook = () => {
           value={authorName}
           onInput={(e) => setAuthor(e.target.value)}
         />
-        <button type="submit">
+
+<select className='option'>
+  <option value="Select Category" className='select'>Select Category</option>
+  <option value="fiction">Fiction</option>
+  <option value="Musical">Musical</option>
+  <option value="Adventure">Adeventure</option>
+  <option value="Romance">Romance</option>
+</select>
+        <button className='btnlike' type="submit">
           ADD BOOK
         </button>
       </form>
