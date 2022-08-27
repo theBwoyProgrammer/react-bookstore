@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 body {
   margin: 0;
@@ -9,7 +8,6 @@ body {
 }
 
 .navbar {
-  font-family: 'Bebas Neue', cursive;
   display: flex;
   flex-direction: row;
   width: 90%;
@@ -17,11 +15,12 @@ body {
 }
 
 .h1 {
-  margin-right: 100px;
+  font-family: 'Montserrat', sans-serif;
   color: #0290ff;
 }
 
 .menu {
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-direction: row;
   gap: 40px;
@@ -34,21 +33,17 @@ body {
   color: gray;
 }
 
-.title {
-  font-family: 'Oswald', sans-serif;
-}
-
 li {
   list-style-type: none;
 }
 
 .author {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #4386bf;
 }
 
 .btn-wrapper {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #4386bf;
   display: flex;
   flex-direction: row;
@@ -58,8 +53,6 @@ li {
 .container {
   border: 1px solid lightgray;
   width: 90%;
-
-  /* margin: 20px 2%; */
   margin-top: 20px;
   margin-bottom: 2%;
   margin-left: 40px;
@@ -82,7 +75,6 @@ li {
 }
 
 .percent {
-  font-family: 'Abel', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,11 +99,12 @@ li {
 
 .chapname {
   color: gray;
-  font-family: 'Abel', sans-serif;
 }
 
-.chapnum {
-  font-family: 'Oswald', sans-serif;
+.cate {
+  font-family: 'Montserrat', sans-serif;
+  color: gray;
+  font-weight: bold;
 }
 
 .btnlike {
@@ -123,8 +116,13 @@ li {
   border: none;
 }
 
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
 .add {
-  font-family: 'Oswald', sans-serif;
   color: grey;
 }
 
@@ -138,6 +136,7 @@ input {
   width: 20%;
   padding: 10px;
   margin: 20px;
+  color: gray;
 }
 
 .contact {

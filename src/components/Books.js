@@ -15,6 +15,7 @@ const BookCollection = ({ item_id, title, author }) => {
   };
   return (
     <div key={item_id} className='container'>
+      <span className='cate'>Fiction</span>
       <div className='title'>{title}</div>
       <div className='author'>{author}</div>
       <div className='btn-wrapper'>

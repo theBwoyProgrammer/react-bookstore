@@ -43,7 +43,8 @@ const AddBook = () => {
         />
 
 <select className='option'>
-  <option value="Fiction">Fiction</option>
+  <option value="Select Category" className='select'>Select Category</option>
+  <option value="fiction">Fiction</option>
   <option value="Musical">Musical</option>
   <option value="Adventure">Adeventure</option>
   <option value="Romance">Romance</option>

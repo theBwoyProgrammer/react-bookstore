@@ -12,7 +12,7 @@ const NavBar = () => {
     {
       id: 2,
       url: '/categories',
-      text: 'CATEGORIES',
+      text: 'Categories',
     },
   ];
   return (
